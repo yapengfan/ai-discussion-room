@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "会客厅 · 浏览器连接组件",
+  "version": "0.8.5",
+  "minimum_chrome_version": "120",
+  "description": "将日常浏览器里已登录的 AI 官网会话连接到本机会客厅群聊室。",
+  "permissions": [
+    "storage",
+    "tabs",
+    "alarms",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://gemini.google.com/*",
+    "https://claude.ai/*",
+    "https://chat.deepseek.com/*"
+  ],
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "action": {
+    "default_title": "连接会客厅群聊室",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://gemini.google.com/*",
+        "https://claude.ai/*",
+        "https://chat.deepseek.com/*"
+      ],
+      "js": [
+        "selectors.js",
+        "editor.js",
+        "send-control.js",
+        "deepseek.js",
+        "agent.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

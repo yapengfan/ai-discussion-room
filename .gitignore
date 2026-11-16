@@ -1,0 +1,10 @@
+node_modules/
+data/
+.test-data/
+runtime/
+*.log
+*.zip
+.env
+.env.*
+.DS_Store
+Thumbs.db
