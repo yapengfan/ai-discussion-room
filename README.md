@@ -1,10 +1,10 @@
-# 会客厅 · Huiketing
+# AI会客厅 · AI Discussion Room
 
 本地统一聊天室，通过浏览器中已登录的 ChatGPT、Gemini、Claude 和 DeepSeek 官网会话参与讨论，不使用模型 API。
 
 ## 下载使用
 
-在 Releases 下载 Windows x64 完整包，完整解压后双击 `启动会客厅.cmd`。完整包包含运行环境和依赖，无需另装 Node.js。AI 官网需要联网。
+在 Releases 下载 Windows x64 完整包，完整解压后双击 `启动AI会客厅.cmd`。完整包包含运行环境和依赖，无需另装 Node.js。AI 官网需要联网。
 
 首次使用，在日常浏览器的扩展管理页加载包内 `browser-connector` 文件夹，输入平台配对码，再为成员选择已登录的官网会话。平台地址为 http://127.0.0.1:4317 。
 
@@ -17,7 +17,7 @@ npm ci --omit=dev
 npm start
 ```
 
-Windows 可双击源码中的 `启动会客厅.cmd`，该脚本使用系统 Node.js。Release 完整包的启动脚本使用随包运行环境。
+Windows 可双击源码中的 `启动AI会客厅.cmd`，该脚本使用系统 Node.js。Release 完整包的启动脚本使用随包运行环境。
 
 ## 功能
 

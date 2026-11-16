@@ -88,7 +88,7 @@ if(process.argv[1] && fileURLToPath(import.meta.url)===process.argv[1]) {
   try { await ensureDependencies({root:dirname(fileURLToPath(import.meta.url))}); }
   catch(error) { console.error(error.message); process.exit(1); }
   const app=await createApp({port:Number(process.env.PORT)||4317});
-  console.log(`会客厅 v0.8.7\n本地地址：${app.url}\n请在日常浏览器加载 browser-connector 文件夹并配对。按 Ctrl+C 停止。`);
+  console.log(`AI会客厅 · AI Discussion Room v0.8.7\n本地地址：${app.url}\n请在日常浏览器加载 browser-connector 文件夹并配对。按 Ctrl+C 停止。`);
   if(process.env.OPEN_ROOM==='1' && process.platform==='win32') execFile('rundll32.exe',['url.dll,FileProtocolHandler',app.url],{windowsHide:true},()=>{});
   let stopping=false; const stop=async()=>{if(stopping)return;stopping=true;await app.close();process.exit(0);};
   process.on('SIGINT',stop);process.on('SIGTERM',stop);

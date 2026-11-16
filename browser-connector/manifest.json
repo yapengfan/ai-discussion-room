@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "会客厅 · 浏览器连接组件",
+  "name": "AI会客厅 · 浏览器连接组件",
   "version": "0.8.5",
   "minimum_chrome_version": "120",
-  "description": "将日常浏览器里已登录的 AI 官网会话连接到本机会客厅群聊室。",
+  "description": "将日常浏览器里已登录的 AI 官网会话连接到本机AI会客厅群聊室。",
   "permissions": [
     "storage",
     "tabs",
@@ -22,7 +22,7 @@
     "service_worker": "worker.js"
   },
   "action": {
-    "default_title": "连接会客厅群聊室",
+    "default_title": "连接AI会客厅群聊室",
     "default_popup": "popup.html"
   },
   "content_scripts": [
